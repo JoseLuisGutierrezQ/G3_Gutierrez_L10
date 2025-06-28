@@ -1,0 +1,27 @@
+import arboles.BTree;
+
+public class Main {
+    public static void main(String[] args) {
+        BTree<Integer> arbol = new BTree<>(4); // Orden 4
+
+        int[] datos = {52, 40, 60, 30, 20, 10, 90, 80, 70};
+        for (int d : datos) {
+            arbol.insert(d);
+        }
+
+        System.out.println("Árbol generado:");
+        System.out.println(arbol);
+
+        System.out.println("Buscando 60:");
+        arbol.search(60);
+
+        System.out.println("Eliminando 60:");
+        arbol.remove(60);
+
+        System.out.println("Árbol después de eliminar 60:");
+        System.out.println(arbol);
+
+        System.out.println("Buscando 60:");
+        arbol.search(60);
+    }
+}
